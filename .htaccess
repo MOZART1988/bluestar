@@ -1,0 +1,121 @@
+Options -Indexes
+RewriteEngine On
+
+AddDefaultCharset utf-8
+AddCharset utf-8 .js
+RewriteCond %{HTTP_HOST} ^kazbluestar.kz
+RewriteRule (.*) http://www.kazbluestar.kz/$1 [R=301,L]
+
+
+
+RewriteRule ^index.php$ / [QSA,R]
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+##############################
+RewriteCond %{QUERY_STRING} d=(.+)
+
+RewriteRule ^index\.php$ http://www.kazbluestar.kz/ [R=301,L]
+
+RewriteRule   ^((\w+)/)?testofthetestandtestforgoodlink/((\w+)/)?$ testofthetestandtestforgoodlink.php?lang=$2&id=$4
+
+RewriteRule   ^((\w+)/)?config/([0-9]+)/?$ config.php?lang=$2&model=$3&bread=132
+
+RewriteRule   ^((\w+)/)?copyright/?$ copyright.php?lang=$2
+RewriteRule   ^((\w+)/)?right_info/?$ right_info.php?lang=$2
+
+#RewriteRule   ^((\w+)/)?section/(\d+)/?$ index.php?lang=$2&sectionId=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?special_offers/?$ special_offers.php?lang=$2&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?special_offers/section/(\d+)/?$ special_offers.php?lang=$2&section=$3&specialOffersSectionId=$4
+RewriteRule   ^((\w+)/(\w+)/)?special_offers/section/(\d+)/(\d+)/?$ special_offers.php?lang=$2&section=$3&specialOffersSectionId=$4&offer=$5
+
+RewriteRule   ^((\w+)/(\w+)/)?service_offers/?$ service_offers.php?lang=$2&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?service_offers/section/(\d+)/?$ service_offers.php?lang=$2&section=$3&serviceOffersSectionId=$4
+RewriteRule   ^((\w+)/(\w+)/)?service_offers/section/(\d+)/(\d+)/?$ service_offers.php?lang=$2&section=$3&serviceOffersSectionId=$4&offer=$5
+
+RewriteRule   ^((\w+)/(\w+)/)?announcements/?$ announcements.php?lang=$2&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?announcements/section/(\d+)/?$ announcements.php?lang=$2&anonsSectionId=$4&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?announcements/section/(\d+)/(\d+)/?$ announcements.php?lang=$2&anonsSectionId=$4&anonsId=$5&section=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?auto_crediting/(\d+)/?$ auto_crediting.php?lang=$2&creditProgId=$4&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?auto_insurance/(\d+)/?$ auto_insurance.php?lang=$2&insuranceId=$4&section=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?service/(\d+)/?$ service.php?lang=$2&serviceSectionId=$4&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?service/(\d+)/(\d+)/?$ service.php?lang=$2&serviceSectionId=$4&servicePageId=$5&section=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?page/justpage/(\d+)/?$ page.php?lang=$2&section=$3&pageId=$4
+
+RewriteRule   ^((\w+)/(\w+)/)?page/?$ page.php?lang=$2&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?page/(\d+)/?$ page.php?lang=$2&section=$3&pageSectionId=$3
+RewriteRule   ^((\w+)/(\w+)/)?page/(\d+)/(\d+)/?$ page.php?lang=$2&section=$3&pageSectionID=$4&pageId=$5&%{QUERY_STRING}
+
+RewriteRule   ^((\w+)/(\w+)/)?map/?$ map.php?lang=$2&bread=117&section=$3
+
+
+RewriteRule   ^((\w+)/(\w+)/)?today/?$ map.php?lang=$2&bread=117&section=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?news/?$ news.php?lang=$2&bread=132&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?articles/?$ articles.php?lang=$2&bread=124&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?ask/?$ ask.php?lang=$2&bread=125&section=$3&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?changePass/?$ changePass.php?lang=$2&section=$3&bread=127&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?confirm/?$ confirm.php?lang=$2&bread=128&section=$3&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?contacts/?$ contacts.php?lang=$2&section=$3&bread=129
+RewriteRule   ^((\w+)/(\w+)/)?edit/?$ edit.php?lang=$2&bread=130&section=$3&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?forgot/?$ forgot.php?lang=$2&bread=127&section=$3&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?register/?$ register.php?lang=$2&bread=133&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?rev/?$ rev.php?lang=$2&bread=134&section=$3&%{QUERY_STRING}
+RewriteRule   ^((\w+)/(\w+)/)?rycle/?$ rycle.php?lang=$2&bread=135&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?search/?$ search.php?lang=$2&bread=136&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?subscribe/?$ subscribe.php?lang=$2&bread=137&section=$3&%{QUERY_STRING}
+#RewriteRule   ^((\w+)/)?catalog/?$ cat.php?lang=$2&bread=126
+RewriteRule   ^((\w+)/(\w+)/)?order/?$ order.php?lang=$2&bread=152&section=$3
+RewriteRule   order.php?$ order.php?lang=$2&bread=152
+
+RewriteRule   ^((\w+)/(\w+)/)?models/(\w+)/?$ models.php?lang=$2&type=$4&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?model/([^\/]+)/(\d+)/(\d+)/?$ model.php?lang=$2&id=$4&section=$3&pageSectionID=$5&pageId=$6
+RewriteRule   ^((\w+)/(\w+)/)?model/([^\/]+)/?$ model.php?lang=$2&id=$4&section=$3
+
+RewriteRule   ^((\w+)/(\w+)/)?news/((\d+)-)((\w+)/)?$ news.php?lang=$2&id=$5&section=$3
+
+
+
+RewriteRule   ^((\w+)/(\w+)/)?news/pg/((\w+)/)?$ news.php?lang=$2&pg=$5&bread=132&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?articles/((\d+)-)((\w+)/)?$ articles.php?lang=$2&id=$5&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?articles/pg/((\w+)/)?$ articles.php?lang=$2&pg=$5&section=$3
+#RewriteRule   ^((\w+)/)?catalog/((\d+)-)((\w+)/)?$ cat.php?lang=$2&cat=$4
+#RewriteRule   ^((\w+)/)?catalog/((\d+)-)((\w+)/)pg/((\d+)/)?$ cat.php?lang=$2&cat=$4&pg=$8
+#RewriteRule   ^((\w+)/)?catalog/((\d+)-)((\w+)/)((\d+)-)((\w+)/)?$ cat.php?lang=$2&cat=$4&id=$8
+RewriteRule   ^(\w+).html$ $1.html [L]
+#RewriteRule   ^((\w+)/)?((\d+)-)(\w+)?\.html$ page.php?lang=$2&id=$4
+RewriteRule   ^((\w+)/(\w+)/)?((\d+)-)(\w+)/pg/((\d+))?\.html$ page.php?lang=$2&id=$5&pg=$7&section=$3
+RewriteRule   ^(ru|en|kz)/(passengercars|mpv_and_camper_van|van|truck|bus)/$ index.php?lang=$1&bread=131&section=$2
+RewriteRule ^(ru)$ http://www.kazbluestar.kz/ [R=301,L]
+RewriteRule   ^(ru|en|kz)/$ index.php?lang=$1&bread=131
+RewriteRule   ^(ru|en|kz)/(\w+)/(\w+)/$ $3.php?lang=$1&section=$2
+RewriteRule   ^(ru|en|kz)/(\w+)/$ $2.php?lang=$1
+
+ErrorDocument 404 /404.php
+
+
+<ifModule mod_headers.c>
+	#���������� html � htm ����� �� ���� ����
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=43200"
+	</FilesMatch>
+	#���������� css, javascript � ��������� ����� �� ���� ������
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	#���������� ���� � ����������� �� �����
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	#��������� �����������
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>

@@ -1,0 +1,395 @@
+#inform .tab-content{
+	/*margin-left: 40px;*/
+}
+#inform #myTab {
+	background: url(/cms/uploads/config/pcn_2rows.png) no-repeat 0 0;
+
+}
+#inform a {
+	outline: none;
+}
+#myTab {
+	border-bottom: 0px;
+	height: 48px;
+}
+#myTab a {
+	color: #fff;
+	outline: none;
+}
+#myTab > li > a {
+	margin-right: 0px;
+	border: none;	
+}
+#myTab > li > a:hover,
+#myTab > li > a:focus {
+	color: #00adef;
+	background: none;
+	border: none;
+}
+#myTab > li.active {
+	background: url(/cms/uploads/config/pcn_active.png) no-repeat 0 0px !important;
+	border: none;
+	height: 46px;
+}
+#myTab > li.active:hover {
+	background: url(/cms/uploads/config/pcn_active.png) no-repeat 0 0;
+	border: none;
+}
+#myTab > .active > a, #myTab  > .active > a:hover, #myTab  > .active > a:focus {
+	border-radius: 0px;
+	background: url(/cms/uploads/config/pcn_active.png) no-repeat 0 0;
+	border: none;
+	color: #00adef !important;
+}
+#myTab li {
+	border-color: #8B8D8F #8B8D8F #26292D #26292D;
+	border-width: 1px;
+	border-style: solid; 
+	margin-bottom: 0px;
+	height: 40px;
+	text-align: center;
+	padding: 0 3px;
+}
+#myTab li:hover,
+#myTab li:focus {
+	background: none;
+}
+#config {
+	color: #666;
+	background: #fff;
+	font-size: 11px;
+}
+#model .nav, #options .nav {
+	border: 1px solid #dddddd;
+	margin-bottom: 0px;
+}
+#model .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus, 
+#options .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+	background: none;
+	color: #00ADEF; 
+}
+#model .nav > li > a:hover, 
+#model .nav > li > a:focus,
+#options .nav > li > a:hover, 
+#options .nav > li > a:focus {
+	background: none;
+	color: #00ADEF;
+}
+#model .nav > li,
+#options .nav > li   {
+	border-right:  1px solid #dddddd;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+#model  .nav > li:last-child,
+#options  .nav > li:last-child {
+	border-right: none;
+}
+#model .nav-pills > li > a,
+#options .nav-pills > li > a {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;	
+}
+#colors p, #lines p, #model p, #model .nav > li > a, #options p, #decors p, #options .nav > li > a {
+	font-weight: bold;
+	color: #666;
+}
+#lines p {
+	margin: 0px;
+}
+#model .tab-content {
+	margin: 0px; 
+}
+#model table {
+	/*width: 100%;
+	margin-top: 20px;*/
+}
+#model table th{
+	border-bottom: 1px solid #BEBEBE;
+	text-align: left;
+}
+
+#model table td {
+	padding: 22px 0 22px 20px;
+	border-bottom: 1px solid #DDDDDD;
+	vertical-align: top;
+}
+#lines table td {
+	padding: 22px 0 22px 14px;
+	border-bottom: 1px solid #DDDDDD;
+	
+}
+#lines table, div.tab_content.config-tab-content table{
+	border-top: 1px solid #BEBEBE;
+	width: 100%;
+}
+.tableimg {
+	max-width: 300px;
+}
+#model table a,
+#options table a,
+#lines table a {
+	background: url(/img/buttonInfo.png) no-repeat 0 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+#model table a:hover,
+#options table a:hover,
+#lines table a:hover {
+	background: url(/img/buttonInfoHi.png) no-repeat 0 0;
+	display: block;
+}
+
+/*#options p {
+	margin: 20px 0 10px 0;
+}*/
+#options table p{
+	margin: 0px;
+}
+#options table td {
+	padding: 12px 10px 12px 14px;	
+}
+#options table tr{
+	border: 1px solid #DDDDDD;
+}
+.nobo tr{	
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important; 
+	border-top: 1px solid #BEBEBE !important;
+
+}
+.nobo {
+	width:  100%;
+}
+#options table {
+	margin-bottom: 20px;
+}
+.yours {
+	min-width: 205px;
+	text-align: left;	
+}
+
+#myTab li.yours {
+	background: url(/cms/uploads/config/pcn_cyan.png) no-repeat 0 0;
+	float: right;
+}
+#myTab li.yours:active {
+	height: 40px;
+}
+.keypng {
+	float: right;
+	position: relative;
+	top: -83px;
+	margin-bottom: -100px;
+}
+.yours a {
+	text-align: left;
+}
+#myTab > li.yours:hover {
+	
+	background: url(/cms/uploads/config/pcn_cyan_hover.png) no-repeat 0 0;	
+}
+#myTab > li.yours:hover > a {
+	color: #fff;
+}
+.totalprice p:first-child > span:first-child {
+	font-weight: bold;
+	float: left;
+	width: 140px;	
+}
+.totalprice p:first-child > span:last-child {
+	float: right;
+	padding-top: 10px;	
+}
+.totalprice div > span {
+	float: left;
+	font-weight: bold;
+}
+.totalprice p {
+	margin-bottom: 20px;
+}
+.totalprice div h1 {
+	float: right;
+}
+.totalprice div span{
+	padding-top: 10px;
+	clear: left;
+}
+.totalprice {
+	padding: 0 20px 0 30px;
+	width: 200px;
+}
+.colors table tr td div{
+	height: 18px;
+	overflow: hidden;
+	width: 46px;
+	/*padding:1px;*/
+	margin-top: -14px;
+	/*background: url(/cms/uploads/config/highlight.png);*/
+}
+.colors table tr td div img {
+	position: relative; 
+	top:-17px;	
+	z-index: 1;
+	opacity: 1;
+}
+.colors table tr td img {
+	margin-bottom: -20px;
+	position: relative;
+	opacity: 0;
+	z-index: 2;
+	top:-7px;
+	left: -1px;
+}
+.colors table tr td img:hover {
+	opacity: 1;
+}
+.colors table tr td {
+	position: relative;
+}
+.bigprew, .bigpic 
+ {
+	float: left;
+}
+.bigprew > img {
+	float: left;
+}
+.bigpic {
+	position: relative;
+	right: 76px;
+	top: 2px;
+}
+.bigprew {
+	margin-right: -40px;
+}
+.colors, .wheels, div.colors-inner {
+	border-top: 1px solid #BEBEBE;
+	/*border-bottom: 1px solid #BEBEBE;*/
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.colors p{
+	clear: both;
+	font-weight: bold;
+}
+/*.colors > div {
+	margin-bottom: 20px;
+}*/
+
+.tab-pane{display:none;}
+.tab-pane.active{display:block!important;}
+
+div.tab_content.config-tab-content {
+	min-height: 500px;
+}
+
+img.color, img.wheel, img.color-inner{cursor: pointer;}
+
+section#mainphoto{width:1000px; height:295px; background: url('/img/big-image-back.png');}
+
+#colors {width: 900px;}
+
+.single{width:100px;float:left; min-height: 50px; margin:15px;}
+.single.input{width:40px!important;}
+.single.title{width:150px!important;}
+.tab-photos{width: 300px; min-height: 50px; float:left; margin: 10px;}
+
+div.name{width:100px; float:left; padding-top: 10px; padding-bottom: 10px;}
+div.text1, div.text2, div.text3 {width: 200px; float:left; padding: 10px;}
+div.price{width:100px; float: left; padding: 10px;}
+
+div.single-result{border-top: 1px solid #BEBEBE; padding-bottom: 10px;}
+
+div.modal-backdrop.fade.in {
+	background: rgba(0,0,0, .8)!important;
+}
+
+.modal.fade.in {
+	top: 10%!important;
+	background: white!important;
+}
+
+.description-open{
+	display:none;
+	position: absolute;
+	left: 0; top:0;
+	width:100%; min-height: 50%;
+	background-color: white;
+}
+
+.description-open h4{
+	margin: 20px;
+	font-size: 26px;
+}
+
+p.description-price{
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	
+}
+
+a.description-close{
+	position: absolute;
+	right: 0; top: 0;
+}
+
+button.next, button.prev {
+	position: absolute;
+	right: 20%;
+	bottom: 5%;
+	background-color: #00adef;
+	color:white;
+	font-size: 8pt;
+}
+
+
+
+.description-open {
+	position: absolute;
+	top: -80px;
+	left: 30px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	max-width: 940px;
+	z-index: 5005;
+}
+.description-open .description-header {
+	height: 28px;
+	background: url(/img/info-header.png);
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	margin-top: -1px;
+}
+.description-open .description-header .description-close {
+	display: inline-block !important;
+	background: #fff !important;
+	text-align: center;
+	width: 20px !important;
+	height: 19px !important;
+	line-height: 19px;
+	margin-top: 4px;
+	margin-right: 8px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.description-open .description {
+	padding: 0 20px 20px 20px;
+}
+.description-open .description > table td { padding: 2px 12px 2px 10px !important; text-align: left !important; }
+.description-open .description > table tr td { border: 1px solid #ddd; }
+.description-open .description > table tr td:first-of-type { width: 160px !important; }
+.description-open .description > table tr td:nth-of-type(2) { width: 300px !important; }
+.description-open .description > table ~ p { font-weight: normal !important; color: #999 !important; margin: 0 0 5px !important; }
+.description-open .description > table ~ p > strong { color: #555; }
+
+

@@ -1,0 +1,122 @@
+﻿.form-search-responsive
+{
+	border:2px solid #ffffff;
+	padding: 25px;
+	background-color: #cecece;
+	position:relative;
+	
+}
+
+.button, input, select, textarea
+{
+	font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+	padding: 7px 50px;
+    position:relative;
+	margin-left: -19px;
+	
+}
+
+.btn
+{
+	padding: 7px 35px;
+	background-color: #03adeb;
+	color: #ffffff;
+	position:relative;
+	margin-left:-4px;
+}
+
+.glyphicon-chevron-right::before 
+{
+	padding-right: 7px;
+	
+}
+
+.example
+{
+	margin-top:25px;
+	margin-bottom:-13px;
+	position:relative;
+	margin-left: 9px;
+}
+
+table 
+       {
+		border-collapse: separate; 
+		border-spacing: 2px;
+    }
+    table th,
+    table td 
+	{
+        padding: 0 5px;
+        	
+    }
+	
+	.table_name
+	{
+		background-color: #65696e;
+		color: #ffffff;
+	}
+	.table_text
+	{
+		background-color: #ededed;
+
+	}
+	.sale
+	{
+		color: #d81414;
+		background-color: #ededed;
+		
+	}
+	.table_text_sale
+	{
+		background-color: #ededed;
+
+	}
+     .table_text_sale:hover 
+	{
+		color: #d81414;
+		background-color: #ededed;
+	}
+     .podskazka
+       {
+       position: relative;
+	   background-color: #ededed;
+	}
+	.podskazka:hover
+	{
+		color: #d81414;
+	}
+	
+    .podskazka:hover:after
+       {
+       
+	   background: #aeaba6;
+	   bottom: 26px;
+	   color: #d81414;
+	   content: attr(title);
+	   left: 20%;
+	   padding: 5px 15px;
+       position: absolute;
+	   z-index: 98;
+	   width: auto;
+	   
+	   
+	}
+	.podskazka:hover:before { /* Добавляем стрелочку внизу блока всплывающей подсказки */
+
+      border: solid;
+      border-color: #aeaba6 transparent;
+      border-width: 6px 6px 0 6px;
+      bottom: 20px;
+      content: "";
+      left: 26%;
+      position: absolute;
+      z-index: 99;
+	}
+
+.bootstrap-tagsinput{
+    width: 100%;
+}
+	

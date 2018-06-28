@@ -1,0 +1,29 @@
+[15-Aug-2014 17:33:21 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[15-Aug-2014 17:50:02 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[19-Aug-2014 13:13:31 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[15-Sep-2014 16:53:03 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[17-Sep-2014 10:29:29 Asia/Almaty] PHP Notice:  Undefined variable: url in /home/goldstar/public_html/cms/files/mysql.php on line 252
+[24-Sep-2014 16:51:01 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 15:32:11 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 15:44:00 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 15:53:56 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 16:04:05 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 16:48:47 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 16:48:48 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 16:50:38 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 17:19:36 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 17:28:29 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 17:33:06 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 17:39:41 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[06-Oct-2014 17:39:42 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 13:59:02 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 15:52:51 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 15:52:52 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 16:09:25 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 16:09:32 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[07-Oct-2014 17:17:17 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[08-Oct-2014 15:26:49 Asia/Almaty] PHP Notice:  Undefined variable: url in /home/goldstar/public_html/cms/files/mysql.php on line 252
+[11-Oct-2014 01:10:17 America/New_York] PHP Warning:  imagejpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/goldstar/public_html/cms/img.php on line 74
+[24-Oct-2014 13:35:17 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
+[10-Dec-2014 00:07:28 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20100525/pdo_sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20100525/pdo_sqlite.so: failed to map segment from shared object: Cannot allocate memory in Unknown on line 0
+[11-Dec-2014 14:11:59 Asia/Almaty] PHP Notice:  Undefined index: cms_root_auth in /home/goldstar/public_html/cms/index.php on line 117
