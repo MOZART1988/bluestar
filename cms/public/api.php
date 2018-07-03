@@ -354,6 +354,53 @@ class api extends appends{
     # ---- ЛЕВОЕ МЕНЮ для простых текстовых страниц ------
     function getLeftMenu($id, $href, $get = 0) {
 
+        if ($this->section->sectionName == 'truck') {
+            $txtPage = 1;
+            $fileId = 87;
+            $linkId = 2;
+
+            if ($list = $this->objects->getFullObjectsList($id)) {
+                $out = array();
+
+                foreach ($list as $o) {
+
+                    # ---- определяем класс пункта -----
+                    $class = '';
+                    if (@$get == $o['id']) {
+                        $class = 'class="active"';
+                    }
+
+
+
+                    # ---- если текстовая (программа кредитования) -----
+                    if ( $o['class_id'] == $txtPage ) {
+                        $name = !empty($o['Название в левом Меню'])?$o['Название в левом Меню']:$o['Название'];
+                        $out[] = '<li '.$class.'><a href="'.$href.$o['id'].'/">'.$name.'</a></li>';
+                    }
+                    # ---- если ссылка на файл ----------
+                    if ( $o['class_id'] == $fileId) {
+                        $out[] = '<li '.$class.'>
+                                <a href="/cms/uploads/'.$o['Загрузка'].'" target="_blank">
+                                    Брошюра
+                                </a>
+                            </li>';
+                    }
+
+                    if(strpos($_SERVER['REQUEST_URI'], 'today_sale') !== false) {
+                        if ($o['class_id'] == 53) {
+                            $class = $o['id'] === @$_GET['category_id'] ? 'class="active"' : '';
+
+                            $out[] = '<li '.$class.'><a href="/'.$this->lang.'/'.$this->section->sectionName.'/today_sale/'.$o['id'].'/">'.$o['Название'].'</a></li>';
+                        }
+                    }
+
+
+                }
+                return implode("\n", $out);
+            }
+
+        }
+
         $txtPage = 1;
         $sectionId = 7;
         $linkId = 2;
@@ -385,7 +432,7 @@ class api extends appends{
                 # ---- если текстовая (программа кредитования) -----
                 if ( $o['class_id'] == $txtPage ) {
 						$name = !empty($o['Название в левом Меню'])?$o['Название в левом Меню']:$o['Название'];
-						$out[] = '<li '.$class.'><a href="'.$href.$o['id'].'/">'.$name.'</a></li>';	
+						$out[] = '<li '.$class.'><a href="'.$href.$o['id'].'/">'.$name.'</a></li>';
                 }
                 # ---- если ссылка на файл ----------
                 if ( $o['class_id'] == $linkId) {
@@ -752,7 +799,7 @@ class api extends appends{
 
             foreach($carsClasses as $carsClass){
                 if ($this->section->sectionName == 'truck') {
-                    $html .= '<li><a href="/'.$this->lang.'/'.$this->section->sectionName.'/model/'.urlencode($carsClass['Код']).'/">'.$carsClass['Название'].'<li>';
+                    $html .= '<li><a href="/'.$this->lang.'/'.$this->section->sectionName.'/model/'.urlencode($carsClass['Код']).'/">'.$carsClass['Название'].'</a><li>';
                 } else {
                     $html .= '<li><a href="">'.$carsClass['Код'].'</a>';
                 }

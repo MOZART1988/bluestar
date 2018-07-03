@@ -27,6 +27,9 @@ RewriteRule   ^((\w+)/)?config/([0-9]+)/?$ config.php?lang=$2&model=$3&bread=132
 RewriteRule   ^((\w+)/)?copyright/?$ copyright.php?lang=$2
 RewriteRule   ^((\w+)/)?right_info/?$ right_info.php?lang=$2
 
+RewriteRule   ^((\w+)/(\w+)/)?today_sale/?$ today_sale.php?lang=$2&section=$3
+RewriteRule   ^((\w+)/(\w+)/)?today_sale/([0-9]+)/?$ today_sale.php?lang=$2&section=$3&category_id=$4
+
 #RewriteRule   ^((\w+)/)?section/(\d+)/?$ index.php?lang=$2&sectionId=$3
 
 RewriteRule   ^((\w+)/(\w+)/)?special_offers/?$ special_offers.php?lang=$2&section=$3

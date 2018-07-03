@@ -8,6 +8,10 @@ if (!empty($api->section->sectionName) && $api->section->sectionName === 'van') 
     $objectId = 28229;
 };
 
+if (!empty($api->section->sectionName) && $api->section->sectionName === 'truck') {
+    $objectId = 32826;
+}
+
 $euroObject = $api->objects->getFullObject(7299);
 $rubObject = $api->objects->getFullObject(7300);
 

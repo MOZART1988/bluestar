@@ -87,7 +87,7 @@ if(!$tabMenuHead){
 }
 
 if($tabMenuHead){
-	
+
     $tabMenus = $api->objects->getFullObjectsListByClass($tabMenuHead['id'], $linkClass, "AND o.active='1' ORDER BY o.sort");
 	$last = $api->objects->last;
     $tabMenuHtml = '<div class="block simple_text mb clearfix"><article class="tabpage"><ul class="tab_row2">';
@@ -278,6 +278,16 @@ if($tabMenuHead){
 								  </div>';
                 continue;
             }
+
+            # ------------ Если доп фото --------
+
+            if ($addObj['class_id'] == 4) {
+                $obj = $api->objects->getFullObject($addObj['id']);
+                $addObjects[] =
+                    '<div class="img" style="float: left; margin: 10px;">
+                        <img src="'._IMGR_.'?w=200&h=150&image='._UPLOADS_.'/'.$addObj['Ссылка'].'">
+                    </div>';
+            }
         }
 
         if (count($snoskaObjects)){
@@ -308,7 +318,7 @@ $api->header(array( 'page-title' => $title ));
                  $parse = $parse->find('table',2)->children(2)->children(2);
                  $kursBanks = substr($parse->outertext, 14,10);
              }
-        
+
                 if($api->section->sectionId == 322 || $api->section->sectionId == 595 || $model['Класс']=='Sprinter Classic' ||  $model['Тип кузова'] == 'Минивэны и кемперы') {
 
                  $kurs = $api->objects->getFullObject(7300); //RUB
@@ -324,8 +334,8 @@ $api->header(array( 'page-title' => $title ));
 
 
 
-                
-                        
+
+
                          $cost = $model['Цена'];
 
                        if(!empty($kurs['Значение'])) {
@@ -338,7 +348,7 @@ $api->header(array( 'page-title' => $title ));
 
 
                         } else {
-                           
+
 
                            $cost = preg_replace('/\D+/Ui', '', $model['Цена']);
 
@@ -405,10 +415,12 @@ $api->header(array( 'page-title' => $title ));
 						<!--<td class="val" colspan="2">(&#8364)</td>-->
                         <!-- <td class="val" colspan="2">тг.</td> -->
                     </tr>
-                    <tr>
-                       <td class="lab">Цена от</td>
-                       <td class="cost"><?=$cost?> </td>
-                    </tr>
+                    <?php if ($api->section->sectionName != 'truck') : ?>
+                        <tr>
+                            <td class="lab">Цена от</td>
+                            <td class="cost"><?=$cost?> </td>
+                        </tr>
+                    <?php endif; ?>
 
                     </tbody></table>
             </div>
