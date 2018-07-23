@@ -1609,6 +1609,16 @@ class api extends appends{
         }
     }
 
+    function resortObjects()
+    {
+        $objects = $this->objects->getObjectsList(29140);
+
+        foreach ($objects as $key => $object) {
+            $this->db->update('objects', array("sort"=>microtime() + $key), "WHERE `id`='".$object['id']."'");
+            echo "Done \n";
+        }
+    }
+
 }
 
 $api = new api();

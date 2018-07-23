@@ -301,7 +301,7 @@ if($tabMenuHead){
                         <a target="_blank" href="'._UPLOADS_.'/'.$obj['Ссылка'].'">
                             <img src="'._IMGR_.'?w=200&h=150&image='._UPLOADS_.'/'.$obj['Картинка'].'">
                         </a>
-                        <a style="display: block;color: #0088cc!important;" target="_blank" href="'._UPLOADS_.'/'.$obj['Ссылка'].'">'.$obj['Название'].'</a>
+                        <a style="display: block;color: #0088cc!important; margin-top: -15px" target="_blank" href="'._UPLOADS_.'/'.$obj['Ссылка'].'">'.$obj['Название'].'</a>
                     </div>';
             }
         }
