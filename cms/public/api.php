@@ -1163,7 +1163,9 @@ class api extends appends{
             return 'href="/'.$this->lang.'/'.$this->section->sectionName.'/catalog/'.$this->t($o['head']).'/'.$this->t($o['id']).'/"';
         }elseif($o['class_id']==82){
 			return 'href="/'.$this->lang.'/'.$this->section->sectionName.'/today/'.$this->t($o['head']).'/'.$this->t($o['id']).'/"';
-		}else{
+		}elseif($o['class_id'] == 1){
+            return 'href="/page.php?lang=ru&section='.$this->section->sectionName.'&pageSectionID=page&pageId='.$o['id'].'"';
+        } else {
             return 'href="/'.$this->lang.'/'.$this->section->sectionName.'/'.$this->t($o['id']).'.html"';
         }
     }

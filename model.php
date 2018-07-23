@@ -285,7 +285,9 @@ if($tabMenuHead){
                 $obj = $api->objects->getFullObject($addObj['id']);
                 $addObjects[] =
                     '<div class="img" style="float: left; margin: 10px;">
-                        <img src="'._IMGR_.'?w=200&h=150&image='._UPLOADS_.'/'.$addObj['Ссылка'].'">
+                        <a href="'._UPLOADS_.'/'.$addObj['Ссылка'].'" class="fancy" rel="gallery-truck">
+                            <img src="'._IMGR_.'?w=200&h=150&image='._UPLOADS_.'/'.$addObj['Ссылка'].'">
+                        </a>    
                     </div>';
             }
 
@@ -296,7 +298,7 @@ if($tabMenuHead){
 
                 $addObjects[] =
                     '<div class="img" style="float: left; margin: 10px;">
-                        <a href="'._UPLOADS_.'/'.$obj['Ссылка'].'">
+                        <a target="_blank" href="'._UPLOADS_.'/'.$obj['Ссылка'].'">
                             <img src="'._IMGR_.'?w=200&h=150&image='._UPLOADS_.'/'.$obj['Картинка'].'">
                         </a>
                         <a style="display: block;color: #0088cc!important;" target="_blank" href="'._UPLOADS_.'/'.$obj['Ссылка'].'">'.$obj['Название'].'</a>
