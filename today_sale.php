@@ -101,11 +101,7 @@ $api->header(array( 'page-title' => 'Сегодня в продаже' ));
                                         <td><?=$item['Опции']?></td>
                                     <?php endif; ?>
                                     <td><?=$item['Местоположение']?></td>
-                                    <?php if ($api->section->sectionName === 'truck') : ?>
-                                        <td><?=number_format((int)$item['Цена'], 0, ' ', ' ')?></td>
-                                    <?php else : ?>
-                                        <td style="width:60px!important;"><?=number_format((int)$item['Цена'] * (!empty($item['Цена в рублях']) ? $rubObject['Значение'] : $euroObject['Значение']), 0, ' ', ' ')?></td>
-                                    <?php endif; ?>
+                                    <td <?=($api->section->sectionName !== 'truck' ? 'style="width:60px!important;"' : '')?>><?=number_format((int)$item['Цена'] * (!empty($item['Цена в рублях']) ? $rubObject['Значение'] : $euroObject['Значение']), 0, ' ', ' ')?></td>
                                 </tr>
                             <?php endforeach ; ?>
                             </tbody>
