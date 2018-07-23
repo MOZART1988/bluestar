@@ -76,7 +76,7 @@ $api->header(array( 'page-title' => 'Сегодня в продаже' ));
                                 <th class="col7" data-sortable="True"
                                     data-sort-column="Location.LocationCategory.SortOrder"
                                     data-sort-direction="Descending"><span>Год</span></th>
-                                <?php if ($api->section->sectionName !== 'van') :?>
+                                <?php if ($api->section->sectionName !== 'van' && $api->section->sectionName !== 'truck') :?>
                                     <th class="sort_asc last" sort_index="0" data-sortable="True"
                                         data-sort-column="FinalPrice" data-sort-direction="Descending"><span
                                                 class="sort_asc">Опции</span></th>
@@ -97,11 +97,11 @@ $api->header(array( 'page-title' => 'Сегодня в продаже' ));
                                     <td><?=$item['Кузов']?></td>
                                     <td><?=$item['Салон']?></td>
                                     <td><?=$item['Год']?></td>
-                                    <?php if ($api->section->sectionName !== 'van') : ?>
+                                    <?php if ($api->section->sectionName !== 'van' && $api->section->sectionName !== 'truck') : ?>
                                         <td><?=$item['Опции']?></td>
                                     <?php endif; ?>
                                     <td><?=$item['Местоположение']?></td>
-                                    <td style="width:60px!important;"><?=number_format((int)$item['Цена'] * (!empty($item['Цена в рублях']) ? $rubObject['Значение'] : $euroObject['Значение']), 0, ' ', ' ')?></td>
+                                    <td <?=($api->section->sectionName !== 'truck' ? 'style="width:60px!important;"' : '')?>><?=number_format((int)$item['Цена'] * (!empty($item['Цена в рублях']) ? $rubObject['Значение'] : $euroObject['Значение']), 0, ' ', ' ')?></td>
                                 </tr>
                             <?php endforeach ; ?>
                             </tbody>
