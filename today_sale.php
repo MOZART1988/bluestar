@@ -9,7 +9,7 @@ if (!empty($api->section->sectionName) && $api->section->sectionName === 'van') 
 };
 
 if (!empty($api->section->sectionName) && $api->section->sectionName === 'truck') {
-    $objectId = 32826;
+    $objectId = 32700;
 }
 
 $euroObject = $api->objects->getFullObject(7299);
