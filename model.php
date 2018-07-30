@@ -398,16 +398,17 @@ $api->header(array( 'page-title' => $title ));
             <!-- images: width:1000px; height: 470px; -->
             <ul id="bxslider2">
                 <? if(count($sliders)){
-                foreach($sliders as $slider){
-                    echo '<li><img src="'._IMG_.'?w=1000&url='._UPLOADS_.'/'.$slider['Ссылка'].'" width="1000" /></li>';
-                }
-            }?>
+                    foreach($sliders as $slider){
+                        echo '<li><img src="'._IMG_.'?w=1000&url='._UPLOADS_.'/'.$slider['Ссылка'].'" width="1000" /></li>';
+                    }
+                }?>
 
             </ul>
         </div><!-- /slider_bx -->
         <div class="towar_main_text">
-            <h1 class="tit"><?=$model['Название']?></h1>
-            <div class="note"><?=$model['Слоган']?></div>
+            <?php if ($api->section->sectionName !== 'truck') : ?>
+
+            <?php endif; ?>
             <div class="links">
                <?=$topMenusHtml;?>
             </div>
@@ -446,7 +447,7 @@ $api->header(array( 'page-title' => $title ));
 
     <? if($mainPage == 1) { ?>
     <div class="text_block">
-        <div class="towar_mini">
+        <div class="towar_mini" <?=$api->section->sectionName === 'truck' ? 'style="padding: 15px 100px 15px 230px"' : ''?>>
             <?=$model['Краткое описание']?>
             <?=$html?>
         </div>

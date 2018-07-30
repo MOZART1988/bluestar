@@ -7,12 +7,10 @@ $api->header(array('page-title'=>'<!--object:[138][18]-->'));
         <?=$api->mainSlider($api->section->mainSliderId)?>
 
         <figure class="ind_menu">
-            <?php if (!empty($api->section->sectionName) && ($api->section->sectionName != 'truck')):?>
-                <?=$api->imageMenu($api->section->imageMenuId)?>
-            <?php endif; ?>
+            <?=$api->imageMenu($api->section->imageMenuId)?>
             <?=$api->mainSectionMenu()?>
         </figure>
-        <div class="text_block">
+        <div class="text_block" <?=$api->section->sectionName === 'truck' ? 'style="min-height:20px"' : ''?>>
 
             <div class="cont_link">
                 <?=$api->smallMenu($api->section->minMenuId)?>
