@@ -1611,7 +1611,7 @@ class api extends appends{
 
     function resortObjects()
     {
-        $objects = $this->objects->getObjectsList(29374);
+        $objects = $this->objects->getObjectsList(32866);
 
         foreach ($objects as $key => $object) {
             $this->db->update('objects', array("sort"=>microtime() + $key), "WHERE `id`='".$object['id']."'");
