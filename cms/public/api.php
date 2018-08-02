@@ -377,6 +377,12 @@ class api extends appends{
                         $name = !empty($o['Название в левом Меню'])?$o['Название в левом Меню']:$o['Название'];
                         $out[] = '<li '.$class.'><a href="'.$href.$o['id'].'/">'.$name.'</a></li>';
                     }
+
+                    # ---- если ссылка  ----------
+                    if ( $o['class_id'] == $linkId) {
+                        $out[] = '<li '.$class.'><a href="/'.$this->lang.'/'.$this->section->sectionName.$o['Ссылка'].'/">'.$o['Название'].'</a></li>';
+                    }
+
                     # ---- если ссылка на файл ----------
                     if ( $o['class_id'] == $fileId) {
                         $out[] = '<li '.$class.'>
@@ -1611,7 +1617,7 @@ class api extends appends{
 
     function resortObjects()
     {
-        $objects = $this->objects->getObjectsList(32866);
+        $objects = $this->objects->getObjectsList(32673);
 
         foreach ($objects as $key => $object) {
             $this->db->update('objects', array("sort"=>microtime() + $key), "WHERE `id`='".$object['id']."'");

@@ -92,8 +92,7 @@ if($tabMenuHead){
 	$last = $api->objects->last;
     $tabMenuHtml = '<div class="block simple_text mb clearfix"><article class="tabpage"><ul class="tab_row2">';
     foreach($tabMenus as $tabMenu){
-		/*echo $_SERVER['REQUEST_URI'].'<br>';*/
-		/*echo '/'.$api->lang.$tabMenu['Ссылка'];*/
+
         $tabMenuHtml .= '<li><a '.($api->selected($tabMenu['id'], $last)?'class="on"':'').' '.$api->getLink($tabMenu).'>'.$tabMenu['Название'].'</a>&nbsp;</li>';
     }
     $tabMenuHtml .= '</ul></article></div>';
