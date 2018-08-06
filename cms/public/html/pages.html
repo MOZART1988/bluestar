@@ -82,14 +82,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="wrapper">
     <header id="header">
         <div class="container">
-            <a href="/<?=$this->lang?>/" class="logo">
+            <div class="logo">
                 <!--smart:{ id:323, title:"Логотипа", actions:["edit"], css:{ position:"absolute" } }-->
                 <?php if ($this->section->sectionName !== 'truck') : ?>
-                    <img src="/img/logo.gif">
+                    <a href="/<?=$this->lang?>/">
+                        <img src="/img/logo_main.gif">
+                    </a>
+                    <a href="/<?=$this-lang?>/<?=$this->sectionName?>/">
+                        <img style="margin-left:50px" src="/img/logo_others.gif">
+                    </a>
                 <?php else :?>
                     <img src="/img/logo_truck.gif"/>
                 <?php endif;?>
-            </a>
+            </div>
             <?=$this->getHeadMenu($this->section->headMenuId)?>
             <div style="position:absolute; top:65px; right: 53px;" class="head-phone"><a style="font-size:14px; color:#00ADEF;" href="tel:+7(727)2506424">+7 (727) 250 64 24</a></div>
             <div class="head_line">
