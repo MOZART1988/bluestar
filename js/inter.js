@@ -577,19 +577,19 @@ $(document).ready(function(){
                 $('.ajax-part-multiform').html($(data).find('.ajax-part-multiform').html());
                 $('.date-picker').datepicker();
 
-                if ($('.ajax-form-year option:selected').val() <= 2013) {
+                /*if ($('.ajax-form-year option:selected').val() <= 2013) {
                     $('body').find('.modal-message-form').css('opacity', 1);
                 } else {
                     $('body').find('.modal-message-form').css('opacity', 0);
-                }
+                }*/
 
-                $('.ajax-form-year').on('change', function(){
+                /*$('.ajax-form-year').on('change', function(){
                     if ($('.ajax-form-year option:selected').val() <= 2013) {
                         $('body').find('.modal-message-form').css('opacity', 1);
                     } else {
                         $('body').find('.modal-message-form').css('opacity', 0);
                     }
-                });
+                });*/
             }
         });
     });
