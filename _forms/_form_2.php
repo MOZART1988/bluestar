@@ -1,9 +1,11 @@
 <?php
 $select_class = array();
 $classes = $api->objects->getFullObjectsListByClass(27364, 7, "AND o.active ORDER BY o.sort");
+$email = $api->objects->getFullObject(33072);
+$emailCopy = $api->objects->getFullObject(33079);
 ?>
-<input type="hidden" name="email-to" value="opbs@mercedes-benz.com.kz">
-<input type="hidden" name="email-to-copy" value="">
+<input type="hidden" name="email-to" value="<?=$email['Значение']?>">
+<input type="hidden" name="email-to-copy" value="<?=$emailCopy['Значение']?>">
 <div class="rows">
     <label class="f_lab">Класс автомобиля<span>*</span></label>
     <select required="required" name="klass">

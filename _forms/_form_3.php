@@ -1,8 +1,10 @@
 <?php
 $yearsObjects = $api->objects->getFullObjectsListByClass(33015, 89, "AND o.active ORDER BY o.sort");
+$email = $api->objects->getFullObject(33073);
+$emailCopy = $api->objects->getFullObject(33080);
 ?>
-<input type="hidden" name="email-to" value="n.lisovoy@mercedes-benz.com.kz">
-<input type="hidden" name="email-to-copy" value="v.kem@mercedes-benz.com.kz,p.druchinin@mercedes-benz.com.kz">
+<input type="hidden" name="email-to" value="<?=$email['Значение']?>">
+<input type="hidden" name="email-to-copy" value="<?=$emailCopy['Значение']?>">
 <div class="rows">
     <label class="f_lab">Перечислите необходимые запчасти или аксессуары<span>*</span></label>
     <textarea required="required" name="detali" class="f_text" value="" style="width: 233px" rows="4"></textarea>
