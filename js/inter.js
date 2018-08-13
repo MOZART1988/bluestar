@@ -559,6 +559,26 @@ window.onload = function() {
 
 $(document).ready(function(){
 
+    function loadYear()
+    {
+        var modalMessage = $('body').find('.modal-message-form');
+
+        $.ajax({
+            url: '/ajax.php?go=loadYearWihImage&yearId=' + $('.ajax-form-year option:selected').val(),
+            dataType: 'JSON',
+            type: 'GET',
+            success: function (data) {
+                if (data.success == true) {
+                    modalMessage.find('img').attr('src', data.src);
+                    modalMessage.css('opacity', 1);
+                } else {
+                    modalMessage.css('opacity', 0);
+                }
+            }
+        });
+    }
+
+
     $('.service-phone').mask("+7 999-999-99-99");
 
     $('body').on('click', '.modal-close', function(){
@@ -576,20 +596,10 @@ $(document).ready(function(){
             success: function (data){
                 $('.ajax-part-multiform').html($(data).find('.ajax-part-multiform').html());
                 $('.date-picker').datepicker();
-
-                /*if ($('.ajax-form-year option:selected').val() <= 2013) {
-                    $('body').find('.modal-message-form').css('opacity', 1);
-                } else {
-                    $('body').find('.modal-message-form').css('opacity', 0);
-                }*/
-
-                /*$('.ajax-form-year').on('change', function(){
-                    if ($('.ajax-form-year option:selected').val() <= 2013) {
-                        $('body').find('.modal-message-form').css('opacity', 1);
-                    } else {
-                        $('body').find('.modal-message-form').css('opacity', 0);
-                    }
-                });*/
+                loadYear();
+                $('.ajax-form-year').on('change', function(){
+                    loadYear();
+                });
             }
         });
     });

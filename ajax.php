@@ -26,6 +26,19 @@ if(isset($_REQUEST['vote']) && is_numeric($voting_id = $_REQUEST['vote'])){
 
 $go = $_REQUEST['go'];
 switch($go){
+    case 'loadYearWihImage':
+        if (!empty($_GET['yearId'])) {
+            $yearid = $_GET['yearId'];
+            $src = '/img/window-year.png';
+            $object = $api->objects->getFullObject($yearid);
+            if ($object && isset($object['Картинка'])) {
+                $src = 'src="'._IMGR_.'?w=156&h=100&image='._UPLOADS_.'/'.$object['Картинка'].'"';
+                exit(json_encode(array('success' => true, 'src' => $src)));
+            }
+        }
+
+        exit(json_encode(array('success' => false)));
+    break;
 	case 'parts':
 		$where = !empty($_REQUEST['query']) ? " AND c.field_263 LIKE '".$api->db->prepare(trim($_REQUEST['query']))."%'":"";
 		$parts = $api->objects->getFullObjectsListByClass(7720, 84, $where." AND o.active='1' ORDER BY c.field_263 LIMIT 10");

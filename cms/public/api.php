@@ -1643,7 +1643,7 @@ class api extends appends{
                 288 => $i
             );
 
-            $objectId = $this->objects->createObjectAndFields($object, $fields)
+            $objectId = $this->objects->createObjectAndFields($object, $fields);
 
             if ($objectId) {
                 echo 'Done "\n"';
