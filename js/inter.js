@@ -571,13 +571,20 @@ $(document).ready(function(){
                 modalMessage.css('opacity', 0);
             },
             success: function (data) {
-                console.log(data);
-                modalMessage.find('img').attr('src', data.src);
-                modalMessage.find('.text').html(data.text);
+
+                if (data.success == true) {
+                    modalMessage.find('img').attr('src', data.src);
+                    modalMessage.find('.text').html(data.text);
+                    modalMessage.css('opacity', 1);
+                } else {
+                    modalMessage.css('opacity', 0);
+                }
+
+
             }
         });
 
-        modalMessage.css('opacity', 1);
+
     }
 
 

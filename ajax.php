@@ -27,11 +27,8 @@ if(isset($_REQUEST['vote']) && is_numeric($voting_id = $_REQUEST['vote'])){
 $go = $_REQUEST['go'];
 switch($go){
     case 'loadYearWihImage':
-        $src = '/img/window-year.png';
-        $text = '<p style="padding: 0px;">Премиум Сервис для Вашего Mercedes-Benz.</p>
-            <p style="padding: 0px;">Скидка:</p>
-            <p style="padding: 0px;">· 30% на обслуживание</p>
-            <p style="padding: 0px;">· до 30% на запчасти</p>';
+        $src = '';
+        $text = '';
 
         if (!empty($_GET['yearId'])) {
             $yearid = $_GET['yearId'];
@@ -42,7 +39,13 @@ switch($go){
             }
         }
 
-        exit(json_encode(array('src' => $src, 'text' => $text)));
+        if (!empty($src)) {
+            exit(json_encode(array('success' => true, 'src' => $src, 'text' => $text)));
+        }
+
+        exit(json_encode(array('success' => false)));
+
+
     break;
 	case 'parts':
 		$where = !empty($_REQUEST['query']) ? " AND c.field_263 LIKE '".$api->db->prepare(trim($_REQUEST['query']))."%'":"";
