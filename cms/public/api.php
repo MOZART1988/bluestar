@@ -1625,6 +1625,34 @@ class api extends appends{
         }
     }
 
+    function createServiceYears()
+    {
+        $headId = 33015;
+        $classId = 89;
+
+        for ($i = 1957; $i <= 2010; $i++) {
+            $object = array(
+                'active'=>1,
+                'name'=>$i,
+                'head' => $headId,
+                'class_id' => $classId,
+                'sort'=>time() + $i
+            );
+
+            $fields = array(
+                288 => $i
+            );
+
+            $objectId = $this->objects->createObjectAndFields($object, $fields)
+
+            if ($objectId) {
+                echo 'Done "\n"';
+            }
+
+        }
+
+    }
+
 }
 
 $api = new api();
