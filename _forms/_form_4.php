@@ -1,7 +1,7 @@
 <?php
 $select_class = array();
 $classes = $api->objects->getFullObjectsListByClass(27364, 7, "AND o.active ORDER BY o.sort");
-$yearsObjects = $api->objects->getFullObjectsListByClass(33015, 89, "ABD i,actuve ORDER BY o.sort");
+$yearsObjects = $api->objects->getFullObjectsListByClass(33015, 89, "AND o.active ORDER BY o.sort");
 ?>
 <input type="hidden" name="email-to" value="d.nam@mercedes-benz.com.kz, n.kisselev@mercedes-benz.com.kz">
 <input type="hidden" name="email-to-copy" value="v.sokolov@mercedes-benz.com.kz">

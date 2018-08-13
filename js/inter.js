@@ -565,14 +565,15 @@ $(document).ready(function(){
 
         $.ajax({
             url: '/ajax.php?go=loadYearWihImage&yearId=' + $('.ajax-form-year option:selected').val(),
-            dataType: 'html',
+            dataType: 'json',
             type: 'GET',
             beforeSend: function() {
                 modalMessage.css('opacity', 0);
             },
             success: function (data) {
                 if (data != '') {
-                    modalMessage.find('img').attr('src', data);
+                    modalMessage.find('img').attr('src', data.src);
+                    modalMessage.find('.text').html(data.text);
                 }
             }
         });
