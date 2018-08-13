@@ -36,9 +36,9 @@ switch($go){
         if (!empty($_GET['yearId'])) {
             $yearid = $_GET['yearId'];
             $object = $api->objects->getFullObject($yearid);
-            if ($object && !empty($object['Картинка']) && !empty($object['Текст'])) {
+            if ($object && !empty($object['Картинка']) && !empty($object['Тест'])) {
                 $src = _IMGR_.'?w=156&h=100&image='._UPLOADS_.'/'.$object['Картинка'];
-                $text = $object['Текст'];
+                $text = $object['Тест'];
             }
         }
 
