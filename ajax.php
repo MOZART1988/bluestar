@@ -31,13 +31,13 @@ switch($go){
             $yearid = $_GET['yearId'];
             $src = '/img/window-year.png';
             $object = $api->objects->getFullObject($yearid);
-            if ($object && isset($object['Картинка'])) {
+            if ($object && !empty$object['Картинка'])) {
                 $src = 'src="'._IMGR_.'?w=156&h=100&image='._UPLOADS_.'/'.$object['Картинка'].'"';
-                exit(json_encode(array('success' => true, 'src' => $src)));
+                exit($src);
             }
         }
 
-        exit(json_encode(array('success' => false)));
+        exit();
     break;
 	case 'parts':
 		$where = !empty($_REQUEST['query']) ? " AND c.field_263 LIKE '".$api->db->prepare(trim($_REQUEST['query']))."%'":"";

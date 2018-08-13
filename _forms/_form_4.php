@@ -1,6 +1,7 @@
 <?php
 $select_class = array();
 $classes = $api->objects->getFullObjectsListByClass(27364, 7, "AND o.active ORDER BY o.sort");
+$yearsObjects = $api->objects->getFullObjectsListByClass(33015, 89, "ABD i,actuve ORDER BY o.sort");
 ?>
 <input type="hidden" name="email-to" value="d.nam@mercedes-benz.com.kz, n.kisselev@mercedes-benz.com.kz">
 <input type="hidden" name="email-to-copy" value="v.sokolov@mercedes-benz.com.kz">
@@ -19,9 +20,9 @@ $classes = $api->objects->getFullObjectsListByClass(27364, 7, "AND o.active ORDE
 <div class="rows" style="position: relative;">
     <label class="f_lab">Год выпуска<span>*</span></label>
     <select required="required" name="year" class="ajax-form-year">
-        <?php for ($i = 1957; $i <= 2017; $i++) : ?>
-            <option value="<?php echo $i ?>"><?php echo $i ?></option>
-        <?php endfor; ?>
+        <?php foreach ($yearsObjects as $item) : ?>
+            <option value="<?=$item['id'] ?>"><?=$item['Значение'] ?></option>
+        <?php endforeach ; ?>
     </select>
     <div class="modal modal-message-form" style="position: absolute; border: 0; border-radius: 0; width: 312px; transition: .3s; margin-left: 40px;
     top: 0; opacity: 0; background: #000; color: #fff;">
