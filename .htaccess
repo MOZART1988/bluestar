@@ -4,7 +4,7 @@ RewriteEngine On
 AddDefaultCharset utf-8
 AddCharset utf-8 .js
 RewriteCond %{HTTP_HOST} ^kazbluestar.kz
-RewriteRule (.*) http://www.kazbluestar.kz/$1 [R=301,L]
+#RewriteRule (.*) http://www.kazbluestar.kz/$1 [R=301,L]
 
 
 
@@ -13,7 +13,7 @@ RewriteRule ^index.php$ / [QSA,R]
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !(.*)/$
-RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+#RewriteRule ^(.*[^/])$ $1/ [L,R=301]
 
 ##############################
 RewriteCond %{QUERY_STRING} d=(.+)
